@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main-encrypto.css">
+    <link rel="stylesheet" href="./css/toastr.css">
     <link rel="shortcut icon" href="./images/encrypto-logo.png" type="image/x-icon">
     <title>Encrypto</title>
 </head>
@@ -23,19 +24,28 @@
         </nav>
     </header>
     <main>
-        <div class="container-encriptador col-10">
-            <textarea name="" id="" cols="30" rows="10"></textarea>
-            <button class="btn-primario">Encriptar</button>
-            <button class="btn-secundario">Desencriptar</button>
+        <div class="container-encriptador col-7 col-s-7">
+            <textarea name="txtIngresado" id="txtIngresado"></textarea>
+
+            <div class="tip">
+                <i class="fa-solid fa-circle-exclamation"></i> Solo letras minúsculas y sin acentos
+            </div>
+            
+            <button id="btnEncriptar" class="btn-primario">Encriptar</button>
+            <button id="btnDesencriptar" class="btn-secundario">Desencriptar</button>
+            
             
         </div>
-        <div class="container-resultado col-3">
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+        <div class="container-resultado col-3 col-s-3">
+            <div class="texto-encriptado">
+                <textarea name="txtResultado" id="txtResultado"></textarea>
+                <button id="btnCopiar" class="btn-terciario">Copiar</button>
+            </div>
+            
             <div class="no-encontrado">
-                <img src="./images/munieco.png" alt="munieco">
-                <p>Ningún mensaje fue encontrado</p>
-                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-                
+                <img class="img-no-encontrado" src="./images/munieco.png" alt="munieco">
+                <h4 class="titulo">Ningún mensaje fue encontrado</h4>
+                <p class="texto">Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
 
         </div>
@@ -44,4 +54,9 @@
         <p><i class="fa-solid fa-code"></i> con <i class="fa-solid fa-heart"></i> por pgyanelli - 2022</p>
     </footer>
 </body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="./js/toastr.min.js"></script>
+<script src="./js/mensajes.js"></script>
+<script src="./js/encrypto.js"></script>
 </html>
