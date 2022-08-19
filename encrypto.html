@@ -24,19 +24,20 @@
         </nav>
     </header>
     <main>
-        <div class="container-encriptador col-7 col-s-7">
-            <textarea name="txtIngresado" id="txtIngresado"></textarea>
+        <section class="container-encriptador col-7 col-s-10">
+            <textarea name="txtIngresado" id="txtIngresado" placeholder="Ingresar texto aquí..."></textarea>
 
             <div class="tip">
                 <i class="fa-solid fa-circle-exclamation"></i> Solo letras minúsculas y sin acentos
             </div>
             
-            <button id="btnEncriptar" class="btn-primario">Encriptar</button>
-            <button id="btnDesencriptar" class="btn-secundario">Desencriptar</button>
+            <div class="contenedor-botones">
+                <button id="btnEncriptar" class="btn-primario">Encriptar</button>
+                <button id="btnDesencriptar" class="btn-secundario">Desencriptar</button>
+            </div>
             
-            
-        </div>
-        <div class="container-resultado col-3 col-s-3">
+        </section>
+        <section class="container-resultado col-3 col-s-11">
             <div class="texto-encriptado">
                 <textarea name="txtResultado" id="txtResultado"></textarea>
                 <button id="btnCopiar" class="btn-terciario">Copiar</button>
@@ -48,7 +49,7 @@
                 <p class="texto">Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
 
-        </div>
+        </secti>
     </main>
     <footer>
         <p><i class="fa-solid fa-code"></i> con <i class="fa-solid fa-heart"></i> por pgyanelli - 2022</p>

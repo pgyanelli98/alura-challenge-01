@@ -29,15 +29,16 @@ nav {
 }
 
 .btn-primario {
+    
     box-sizing: border-box;
     background-color: #1e1a2f;
     color: white;
+    font-size: 16px;
     border: #1e1a2f 1px solid;
     border-radius: 24px;
-    flex-direction: row;
     display:inline-block;
     padding: 1rem;
-    width: 20.5rem;
+    width: 20rem;
     margin: 0.75rem;
 
 }
@@ -52,9 +53,10 @@ nav {
     color: #1e1a2f;
     border: #1e1a2f 1px solid;
     border-radius: 24px;
+    font-size: 16px;
     padding: 1rem;
     flex-direction: row;
-    width: 20.5rem;
+    width: 20rem;
     margin: .75rem;
 }
 
@@ -66,45 +68,8 @@ nav {
     border-radius: 24px;
     padding: 1rem;
     flex-direction: row;
-    width: 20.5rem;
-}
-
-.ingreso-usuario {
-    display: inline-block;
-    padding: 0 0 0 1.5rem;
-}
-
-.container-texto {
-    color: #1e1a2f;
-    font-size: 2rem;
-    background-color: transparent;
-    border-color: transparent;
-}
-
-.container-no-msj {
-    text-align: center;
-}
-
-.container-no-msj h4 {
-    font-weight: bold;
-    font-size: 24px;
-    color: #343A40;
-}
-
-.container-no-msj div {
-    margin: 8px;
-}
-
-.resultado-encrypt {
-    display: inline-block;
-    height: 100%;
-    padding: 12rem 0 12rem 0;
-    margin: 2rem;
-    background-color: white;
-    border: white 1px solid;
-    border-radius: 32px;
-    box-shadow: 0 20.5rem 2rem -0.5rem rgba(0, 0, 0, 0.08);
-    
+    width: 328px;
+    height: 50px;
 }
 
 footer {
@@ -123,15 +88,19 @@ footer {
     display: inline-block;
     padding: 2.5rem;
     text-align: center;
-    margin-right: 5rem;
     
 }
 
 .container-encriptador textarea {
-    background-color: transparent;
     width: 100%;
     height: 20rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    color: #1e1a2f;
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    resize: none;
 }
 
 .container-resultado {
@@ -139,11 +108,28 @@ footer {
     display: inline-block;
     background-color: white;
     border-radius: 24px;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    margin-left: .65rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.container-resultado textarea {
+    width: 100%;
+    height: 20rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: #1e1a2f;
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    resize: none;
 }
 
 .texto-encriptado {
@@ -175,7 +161,7 @@ footer {
 /* For mobile phones: */
 [class*="col-"] {
     width: 100%;
-
+    
 }
 
 @media only screen and (max-width: 768px) {
@@ -193,7 +179,7 @@ footer {
     .col-s-11 {width: 91.66%;}
     .col-s-12 {width: 100%;}
 
-    .imagen-munieco {
+    .img-no-encontrado {
         display: none;
     }
 
@@ -217,7 +203,5 @@ footer {
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
-
-    
 
 }

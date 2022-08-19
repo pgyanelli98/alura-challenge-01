@@ -6,6 +6,22 @@ const key = {
     "u": "ufat"
 }
 
+const reverseKey = {
+    "ai": "a",
+    "enter": "e",
+    "imes": "i",
+    "ober": "o",
+    "ufat": "u"
+}
+
+String.prototype.allReplace = function(obj) {
+    var retStr = this;
+    for (var x in obj) {
+        retStr = retStr.replace(new RegExp(x, 'g'), obj[x]);
+    }
+    return retStr;
+};
+
 // Textareas
 var txtIngresado = document.querySelector('#txtIngresado');
 var txtResultado = document.querySelector('#txtResultado');
@@ -21,12 +37,29 @@ function encriptarTexto() {
         atencion("Sólo se aceptan textos en minúsculas y sin acentos.");
     } else {
         let textoEncriptado = txtIngresado.value.replace(/[aeiou]/gi, match => key[match]);
-        console.log(textoEncriptado);
         esconderNoEncontrado();
         txtResultado.value = textoEncriptado;
         mostrarTextoEncriptado();
     }
     
+}
+
+function obtenerKey(objeto, valor) {
+    return Object.keys(objeto).find(key => objeto[key] === valor);
+}
+
+function desencriptarTexto() {
+    var validacion = validarTexto();
+    if (validacion === -1) {
+        atencion("Debes ingresar un texto a encriptar");
+    } else if (validacion === 1) {
+        atencion("Sólo se aceptan textos en minúsculas y sin acentos.");
+    } else {
+        let textoEncriptado = txtIngresado.value.allReplace(reverseKey);
+        esconderNoEncontrado();
+        txtResultado.value = textoEncriptado;
+        mostrarTextoEncriptado();
+    }
 }
 
 function esconderNoEncontrado() {
@@ -61,5 +94,10 @@ btnCopiar.addEventListener('click', () => {
     txtResultado.select();
     txtResultado.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(txtResultado.value);
-    alert("Copied the text: " + txtResultado.value);
+    info("Texto copiado al portapapeles");
+});
+
+var btnDesencriptar = document.querySelector('#btnDesencriptar');
+btnDesencriptar.addEventListener('click', () => {
+    desencriptarTexto();
 });
