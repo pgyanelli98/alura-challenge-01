@@ -44,10 +44,6 @@ function encriptarTexto() {
     
 }
 
-function obtenerKey(objeto, valor) {
-    return Object.keys(objeto).find(key => objeto[key] === valor);
-}
-
 function desencriptarTexto() {
     var validacion = validarTexto();
     if (validacion === -1) {
